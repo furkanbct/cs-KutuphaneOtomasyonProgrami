@@ -1,0 +1,73 @@
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Kütüphane Programı.exe.config
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Kütüphane Programı.exe
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Kütüphane Programı.pdb
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\AForge.dll
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\AForge.Video.DirectShow.dll
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\AForge.Video.dll
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Google.Apis.Auth.dll
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Google.Apis.Auth.PlatformServices.dll
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Google.Apis.Books.v1.dll
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Google.Apis.Core.dll
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Google.Apis.dll
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Google.Apis.PlatformServices.dll
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Microsoft.Extensions.Configuration.dll
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Microsoft.Extensions.Primitives.dll
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Newtonsoft.Json.dll
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\System.Buffers.dll
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\System.Memory.dll
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\System.Numerics.Vectors.dll
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\System.Text.Encodings.Web.dll
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\System.Text.Json.dll
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\System.Threading.Tasks.Extensions.dll
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\System.ValueTuple.dll
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\USB-Barcode-Scanner.dll
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\zxing.dll
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\zxing.presentation.dll
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\AForge.xml
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\AForge.Video.xml
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\AForge.Video.DirectShow.xml
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Google.Apis.pdb
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Google.Apis.xml
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Google.Apis.Auth.pdb
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Google.Apis.Auth.xml
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Google.Apis.Books.v1.pdb
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Google.Apis.Books.v1.xml
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Google.Apis.Core.pdb
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Google.Apis.Core.xml
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Microsoft.Extensions.Configuration.xml
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Microsoft.Extensions.Configuration.FileExtensions.xml
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Microsoft.Extensions.Configuration.Json.xml
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Microsoft.Extensions.FileProviders.Abstractions.xml
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Microsoft.Extensions.FileProviders.Physical.xml
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Microsoft.Extensions.FileSystemGlobbing.xml
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Microsoft.Extensions.Primitives.xml
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\Newtonsoft.Json.xml
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\System.Buffers.xml
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\System.Memory.xml
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\System.Numerics.Vectors.xml
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\System.Text.Encodings.Web.xml
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\System.Text.Json.xml
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\System.Threading.Tasks.Extensions.xml
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\System.ValueTuple.xml
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\zxing.xml
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\bin\Release\zxing.presentation.xml
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\obj\Release\Kütüphane_Programı.KameraBarkodOkuyucu.resources
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\obj\Release\Kütüphane_Programı.KisiEkle.resources
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\obj\Release\Kütüphane_Programı.KitapEkle.resources
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\obj\Release\Kütüphane_Programı.Properties.Resources.resources
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\obj\Release\Kütüphane Programı.csproj.GenerateResource.cache
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\obj\Release\Kütüphane Programı.csproj.CoreCompileInputs.cache
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\obj\Release\Kütüphane Programı.csproj.CopyComplete
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\obj\Release\Kütüphane Programı.exe
+C:\Users\Furkan\source\repos\Kütüphane Programı\Kütüphane Programı\obj\Release\Kütüphane Programı.pdb
