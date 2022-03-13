@@ -80,7 +80,8 @@ namespace Kütüphane_Programı
         {
             UpdateInfoLabels();
         }
-        void UpdateInfoLabels()
+
+        public void UpdateInfoLabels()
         {
             List<DataGridViewRow> takenTodayRows = new List<DataGridViewRow>();
             List<DataGridViewRow> gecikmisRows = new List<DataGridViewRow>();
@@ -89,17 +90,36 @@ namespace Kütüphane_Programı
                 if (row.Cells[7].Value.ToString() == DateTime.Today.ToString("dd.MM.yyyy"))
                 {
                     takenTodayRows.Add(row);
+                    row.DefaultCellStyle.BackColor = SystemColors.Highlight;
                 }
                 if (row.Cells[8].Value.ToString() == "Hayır")
                 {
                     if (DateTime.ParseExact(row.Cells[7].Value.ToString(), "dd.MM.yyyy", CultureInfo.CurrentCulture) < DateTime.Today)
                     {
                         gecikmisRows.Add(row);
+                        row.DefaultCellStyle.BackColor = Color.Red;
                     }
+                }
+                else
+                {
+                    row.DefaultCellStyle.BackColor = Color.Lime;
                 }
             }
             alinacakLabel.Text = takenTodayRows.Count.ToString();
             gecikmisLabel.Text = gecikmisRows.Count.ToString();
+        }
+
+        private void oduncDataView_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            UpdateInfoLabels();
+        }
+
+        private void refreshButton_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = string.Empty;
+            oduncDataView.Rows.Clear();
+            DatabaseManager.UpdateDataView(oduncDataView, false);
+            UpdateInfoLabels();
         }
     }
 }

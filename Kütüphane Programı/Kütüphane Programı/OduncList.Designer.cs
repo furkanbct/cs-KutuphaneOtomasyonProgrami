@@ -30,7 +30,7 @@ namespace Kütüphane_Programı
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -69,15 +69,24 @@ namespace Kütüphane_Programı
             this.bookAuthorTextBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
             this.gecikmisLabel = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.isTakenTextBox = new System.Windows.Forms.TextBox();
             this.refreshButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.oduncDataView)).BeginInit();
             this.dataViewContextMenu.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -146,14 +155,14 @@ namespace Kütüphane_Programı
             this.oduncDataView.AllowUserToAddRows = false;
             this.oduncDataView.AllowUserToDeleteRows = false;
             this.oduncDataView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.oduncDataView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.oduncDataView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.oduncDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.oduncDataView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -172,6 +181,7 @@ namespace Kütüphane_Programı
             this.oduncDataView.ReadOnly = true;
             this.oduncDataView.Size = new System.Drawing.Size(960, 279);
             this.oduncDataView.TabIndex = 11;
+            this.oduncDataView.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.oduncDataView_RowsAdded);
             this.oduncDataView.SelectionChanged += new System.EventHandler(this.oduncDataView_SelectionChanged);
             this.oduncDataView.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.oduncDataView_UserAddedRow);
             // 
@@ -246,7 +256,7 @@ namespace Kütüphane_Programı
             // alinacakLabel
             // 
             this.alinacakLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.alinacakLabel.Location = new System.Drawing.Point(753, 65);
+            this.alinacakLabel.Location = new System.Drawing.Point(753, 42);
             this.alinacakLabel.Name = "alinacakLabel";
             this.alinacakLabel.Size = new System.Drawing.Size(213, 25);
             this.alinacakLabel.TabIndex = 2;
@@ -255,10 +265,10 @@ namespace Kütüphane_Programı
             // 
             // totalPersonCountTextLabel
             // 
-            this.totalPersonCountTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.totalPersonCountTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.totalPersonCountTextLabel.Location = new System.Drawing.Point(753, 12);
             this.totalPersonCountTextLabel.Name = "totalPersonCountTextLabel";
-            this.totalPersonCountTextLabel.Size = new System.Drawing.Size(213, 56);
+            this.totalPersonCountTextLabel.Size = new System.Drawing.Size(213, 35);
             this.totalPersonCountTextLabel.TabIndex = 2;
             this.totalPersonCountTextLabel.Text = "Bugün Alınacak Kitap Sayısı";
             this.totalPersonCountTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -405,7 +415,6 @@ namespace Kütüphane_Programı
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.refreshButton);
             this.groupBox2.Controls.Add(this.sexTextBox);
             this.groupBox2.Controls.Add(this.nameSurnameTextBox);
             this.groupBox2.Controls.Add(this.bookAuthorTextBox);
@@ -458,20 +467,10 @@ namespace Kütüphane_Programı
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label11
-            // 
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label11.Location = new System.Drawing.Point(753, 81);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(213, 56);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "Gecikmiş Kitap Sayısı";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // gecikmisLabel
             // 
             this.gecikmisLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.gecikmisLabel.Location = new System.Drawing.Point(753, 128);
+            this.gecikmisLabel.Location = new System.Drawing.Point(753, 96);
             this.gecikmisLabel.Name = "gecikmisLabel";
             this.gecikmisLabel.Size = new System.Drawing.Size(213, 25);
             this.gecikmisLabel.TabIndex = 2;
@@ -499,20 +498,82 @@ namespace Kütüphane_Programı
             // refreshButton
             // 
             this.refreshButton.Image = global::Kütüphane_Programı.Properties.Resources.refresh_icon;
-            this.refreshButton.Location = new System.Drawing.Point(493, 106);
+            this.refreshButton.Location = new System.Drawing.Point(733, 124);
             this.refreshButton.Name = "refreshButton";
             this.refreshButton.Size = new System.Drawing.Size(40, 40);
             this.refreshButton.TabIndex = 3;
             this.refreshButton.UseVisualStyleBackColor = true;
+            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.pictureBox1.Location = new System.Drawing.Point(870, 127);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label13.Location = new System.Drawing.Point(754, 65);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(213, 35);
+            this.label13.TabIndex = 2;
+            this.label13.Text = "Gecikmiş Kitap Sayısı";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Red;
+            this.pictureBox2.Location = new System.Drawing.Point(913, 127);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Lime;
+            this.pictureBox3.Location = new System.Drawing.Point(957, 127);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox3.TabIndex = 17;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox4.Location = new System.Drawing.Point(830, 127);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox4.TabIndex = 17;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label11.Location = new System.Drawing.Point(818, 145);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(42, 23);
+            this.label11.TabIndex = 18;
+            this.label11.Text = "Alınacak";
             // 
             // OduncList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 461);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.refreshButton);
             this.Controls.Add(this.gecikmisLabel);
             this.Controls.Add(this.alinacakLabel);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.totalPersonCountTextLabel);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.oduncDataView);
@@ -536,6 +597,10 @@ namespace Kütüphane_Programı
             this.dataViewContextMenu.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -573,7 +638,6 @@ namespace Kütüphane_Programı
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox bookAuthorTextBox;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label gecikmisLabel;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -586,5 +650,11 @@ namespace Kütüphane_Programı
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox isTakenTextBox;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label11;
     }
 }
