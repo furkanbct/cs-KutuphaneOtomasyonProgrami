@@ -118,7 +118,7 @@ namespace Kütüphane_Programı
         {
             textBox1.Text = string.Empty;
             oduncDataView.Rows.Clear();
-            DatabaseManager.UpdateDataView(oduncDataView, false);
+            DatabaseManager.UpdateOduncDataView(oduncDataView);
             UpdateInfoLabels();
         }
     }
