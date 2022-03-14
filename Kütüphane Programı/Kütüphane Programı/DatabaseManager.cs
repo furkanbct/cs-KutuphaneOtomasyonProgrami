@@ -23,7 +23,7 @@ namespace Kütüphane_Programı
                     sqlite.Open();
                     string sql = "CREATE TABLE 'Books' ('ISBN' TEXT,'BookName' TEXT,'Author' TEXT,'PageCount' TEXT,'Publisher' TEXT,'BookType' TEXT,'TeminType' TEXT,'TeminDate' TEXT,'Donator' TEXT,'StokCount' TEXT,'AddedDate' TEXT)";
                     string sql2 = "CREATE TABLE 'Persons' ('TCNO' TEXT,'Name' TEXT,'Surname' TEXT,'BirthDate' TEXT,'Sex' TEXT,'PhoneNumber' TEXT,'Email' TEXT,'Address' TEXT,'AddedDate' TEXT)";
-                    string sql3 = "CREATE TABLE 'Odunc' ('TCNO' TEXT, 'NameSurname' TEXT, 'Sex' TEXT, 'ISBN' TEXT, 'BookName' TEXT, 'BookAuthor' TEXT, 'DateOfGive' TEXT, 'DateOfTake' TEXT, 'IsTaken' TEXT)";
+                    string sql3 = "CREATE TABLE 'Odunc' ('TCNO' TEXT, 'NameSurname' TEXT, 'Sex' TEXT, 'ISBN' TEXT, 'BookName' TEXT, 'BookAuthor' TEXT, 'DateOfGive' TEXT, 'DateOfTake' TEXT, 'IsTaken' TEXT, 'DateOfTaken' TEXT)";
                     SQLiteCommand command = new SQLiteCommand(sql, sqlite);
                     SQLiteCommand command2 = new SQLiteCommand(sql2, sqlite);
                     SQLiteCommand command3 = new SQLiteCommand(sql3, sqlite);
@@ -81,7 +81,7 @@ namespace Kütüphane_Programı
             con.Open();
             var cmd = new SQLiteCommand(con);
 
-            cmd.CommandText = "INSERT INTO Odunc(TCNO,NameSurname,Sex,ISBN,BookName,BookAuthor,DateOfGive,DateOfTake,IsTaken) VALUES(@tcno,@nameSurname,@sex,@isbn,@bookName,@bookAuthor,@dateOfGive,@dateOfTake,@isTaken)";
+            cmd.CommandText = "INSERT INTO Odunc(TCNO,NameSurname,Sex,ISBN,BookName,BookAuthor,DateOfGive,DateOfTake,IsTaken,DateOfTaken) VALUES(@tcno,@nameSurname,@sex,@isbn,@bookName,@bookAuthor,@dateOfGive,@dateOfTake,@isTaken,@dateOfTaken)";
 
             cmd.Parameters.AddWithValue("@tcno", oduncDB.TCNO);
             cmd.Parameters.AddWithValue("@nameSurname", oduncDB.NameSurname);
@@ -92,6 +92,7 @@ namespace Kütüphane_Programı
             cmd.Parameters.AddWithValue("@dateOfGive", oduncDB.DateOfGive);
             cmd.Parameters.AddWithValue("@dateOfTake", oduncDB.DateOfTake);
             cmd.Parameters.AddWithValue("@isTaken", oduncDB.IsTaken);
+            cmd.Parameters.AddWithValue("@dateOfTaken", oduncDB.DateOfTaken);
 
             cmd.ExecuteNonQuery();
         }
@@ -133,6 +134,26 @@ namespace Kütüphane_Programı
             cmd.Parameters.AddWithValue("@email", person.Email);
             cmd.Parameters.AddWithValue("@address", person.Address);
             cmd.Parameters.AddWithValue("@addedDate", person.AddedDate);
+            cmd.ExecuteNonQuery();
+        }
+        public static void Update(OduncDB oduncDB)
+        {
+            var con = new SQLiteConnection(cs);
+            con.Open();
+            var cmd = new SQLiteCommand(con);
+
+            cmd.CommandText = "UPDATE Odunc SET TCNO=@tcno,NameSurname=@nameSurname,Sex=@sex,ISBN=@isbn,BookName=@bookName,BookAuthor=@bookAuthor,DateOfGive=@dateOfGive,DateOfTake=@dateOfTake,IsTaken=@isTaken,DateOfTaken=@dateOfTaken Where TCNO = @tcno AND ISBN = @isbn";
+            cmd.Prepare();
+            cmd.Parameters.AddWithValue("@tcno", oduncDB.TCNO);
+            cmd.Parameters.AddWithValue("@nameSurname", oduncDB.NameSurname);
+            cmd.Parameters.AddWithValue("@sex", oduncDB.Sex);
+            cmd.Parameters.AddWithValue("@isbn", oduncDB.ISBN);
+            cmd.Parameters.AddWithValue("@bookName", oduncDB.BookName);
+            cmd.Parameters.AddWithValue("@bookAuthor", oduncDB.BookAuthor);
+            cmd.Parameters.AddWithValue("@dateOfGive", oduncDB.DateOfGive);
+            cmd.Parameters.AddWithValue("@dateOfTake", oduncDB.DateOfTake);
+            cmd.Parameters.AddWithValue("@isTaken", oduncDB.IsTaken);
+            cmd.Parameters.AddWithValue("@dateOfTaken", oduncDB.DateOfTaken);
             cmd.ExecuteNonQuery();
         }
         public static void UpdateDataView(DataGridView view, bool isBook)
@@ -355,6 +376,7 @@ namespace Kütüphane_Programı
                         oduncDB.DateOfGive = data[6];
                         oduncDB.DateOfTake = data[7];
                         oduncDB.IsTaken = data[8];
+                        oduncDB.DateOfTaken = data[9];
                     }
                 }
             }
@@ -419,6 +441,34 @@ namespace Kütüphane_Programı
             var cmd = new SQLiteCommand(con);
 
             cmd.CommandText = String.Format("SELECT TCNO FROM Persons WHERE TCNO = '{0}'",tcno);
+            using (var reader = cmd.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    List<string> data = new List<string>();
+                    for (int i = 0; i < reader.FieldCount; i++)
+                    {
+                        data.Add(reader.GetString(i));
+                    }
+                    if(data.Count > 0)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+            }
+            return false;
+        }
+        public static bool CheckOduncExist(string tcno,string isbn)
+        {
+            var con = new SQLiteConnection(cs);
+            con.Open();
+            var cmd = new SQLiteCommand(con);
+
+            cmd.CommandText = String.Format("SELECT TCNO, ISBN FROM Odunc WHERE TCNO = '{0}' AND ISBN = '{1}'",tcno,isbn);
             using (var reader = cmd.ExecuteReader())
             {
                 while (reader.Read())

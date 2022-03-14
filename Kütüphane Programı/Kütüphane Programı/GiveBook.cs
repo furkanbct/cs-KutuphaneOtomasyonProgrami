@@ -17,6 +17,7 @@ namespace Kütüphane_Programı
         {
             InitializeComponent();
             oduncListesiDataView = view;
+            sexComboBox.SelectedIndex = 0;
         }
 
         private void GiveBook_Load(object sender, EventArgs e)
@@ -53,18 +54,26 @@ namespace Kütüphane_Programı
             oduncDB.DateOfGive = giveDatePicker.Value.ToString("dd.MM.yyyy");
             oduncDB.DateOfTake = takeDatePicker.Value.ToString("dd.MM.yyyy");
             oduncDB.IsTaken = "Hayır";
+            oduncDB.DateOfTaken = "-";
 
-            try
+            if (!DatabaseManager.CheckOduncExist(oduncDB.TCNO, oduncDB.ISBN))
             {
-                DatabaseManager.Insert(oduncDB);
-                MessageBox.Show("Ödünç Verme İşlemi Başarıyla Tamamlandı","Kütüphane Otomasyon Programı",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                oduncListesiDataView.Rows.Clear();
-                DatabaseManager.UpdateOduncDataView(oduncListesiDataView);
-                this.Close();
+                try
+                {
+                    DatabaseManager.Insert(oduncDB);
+                    oduncListesiDataView.Rows.Clear();
+                    DatabaseManager.UpdateOduncDataView(oduncListesiDataView);
+                    MessageBox.Show("Ödünç Verme İşlemi Başarıyla Tamamlandı", "Kütüphane Otomasyon Programı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ödünç Verme İşlemi Başarısız Oldu Hata :" + ex.Message, "Kütüphane Otomasyon Programı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch(Exception ex)
+            else
             {
-                MessageBox.Show("Ödünç Verme İşlemi Başarısız Oldu Hata :"+ex.Message,"Kütüphane Otomasyon Programı",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Bu Bilgiler Zaten Kayıtlı","Kütüphane Otomasyon Progarmı",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 
@@ -76,6 +85,11 @@ namespace Kütüphane_Programı
                 bookNameTextBox.Text = book.BookName;
                 bookAuthorTextBox.Text = book.Author;
             }
+            else
+            {
+                bookNameTextBox.Text = string.Empty;
+                bookAuthorTextBox.Text = string.Empty;
+            }
         }
 
         private void tcnoTextBox_TextChanged(object sender, EventArgs e)
@@ -85,6 +99,11 @@ namespace Kütüphane_Programı
                 PersonDB person = DatabaseManager.GetPerson(tcnoTextBox.Text);
                 nameSurnameTextBox.Text = person.Name + " " + person.Surname;
                 sexComboBox.SelectedIndex = sexComboBox.Items.IndexOf(person.Sex);
+            }
+            else
+            {
+                nameSurnameTextBox.Text = string.Empty;
+                sexComboBox.SelectedIndex = 0;
             }
         }
     }

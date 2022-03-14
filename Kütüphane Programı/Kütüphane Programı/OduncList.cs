@@ -121,5 +121,28 @@ namespace Kütüphane_Programı
             DatabaseManager.UpdateOduncDataView(oduncDataView);
             UpdateInfoLabels();
         }
+
+        private void button1_Click(object sender, EventArgs e)//Teslim Al Butonu
+        {
+            DialogResult result = MessageBox.Show("Seçilen Kitabı Teslim Almak İstediğine Emin misin ?","Kütüphane Otomasyon Programı",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            if(result == DialogResult.Yes)
+            {
+                DataGridViewRow oduncRowView = oduncDataView.CurrentCell.OwningRow;
+                OduncDB odunc = new OduncDB();
+                odunc.TCNO = oduncRowView.Cells[0].Value.ToString();
+                odunc.NameSurname = oduncRowView.Cells[1].Value.ToString();
+                odunc.Sex = oduncRowView.Cells[2].Value.ToString();
+                odunc.ISBN = oduncRowView.Cells[3].Value.ToString();
+                odunc.BookName = oduncRowView.Cells[4].Value.ToString();
+                odunc.BookAuthor = oduncRowView.Cells[5].Value.ToString();
+                odunc.DateOfGive = oduncRowView.Cells[6].Value.ToString();
+                odunc.DateOfTake = oduncRowView.Cells[7].Value.ToString();
+                odunc.IsTaken = "Evet";
+                odunc.DateOfTaken = String.Format("{0} {1}:{2}", DateTime.Today.ToString("dd.MM.yyyy"), DateTime.Now.Hour, DateTime.Now.Minute);
+                DatabaseManager.Update(odunc);
+                oduncDataView.Rows.Clear();
+                DatabaseManager.UpdateOduncDataView(oduncDataView);
+            }
+        }
     }
 }

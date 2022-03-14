@@ -17,5 +17,6 @@ namespace Kütüphane_Programı
         public string DateOfGive { get; set; }
         public string DateOfTake { get; set; }
         public string IsTaken { get; set; }
+        public string DateOfTaken { get; set; }
     }
 }
