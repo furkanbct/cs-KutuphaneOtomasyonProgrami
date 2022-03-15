@@ -30,6 +30,7 @@ namespace Kütüphane_Programı
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddBook));
             this.isbnTextBox = new System.Windows.Forms.TextBox();
             this.authorTextBox = new System.Windows.Forms.TextBox();
             this.bookNameTextBox = new System.Windows.Forms.TextBox();
@@ -429,6 +430,7 @@ namespace Kütüphane_Programı
             this.Controls.Add(this.authorTextBox);
             this.Controls.Add(this.isbnTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "AddBook";
             this.Text = "Kitap Ekle";

@@ -29,6 +29,7 @@ namespace Kütüphane_Programı
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddPerson));
             this.label1 = new System.Windows.Forms.Label();
             this.tcTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -220,7 +221,7 @@ namespace Kütüphane_Programı
             this.birthdayTextBox.Mask = "00/00/0000";
             this.birthdayTextBox.Name = "birthdayTextBox";
             this.birthdayTextBox.Size = new System.Drawing.Size(149, 20);
-            this.birthdayTextBox.TabIndex = 10;
+            this.birthdayTextBox.TabIndex = 3;
             this.birthdayTextBox.ValidatingType = typeof(System.DateTime);
             this.birthdayTextBox.Click += new System.EventHandler(this.birthdayTextBox_Click);
             this.birthdayTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.birthdayTextBox_Validating);
@@ -250,6 +251,7 @@ namespace Kütüphane_Programı
             this.Controls.Add(this.tcTextBox);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "AddPerson";
             this.Text = "Kişi Ekle";

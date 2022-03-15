@@ -29,6 +29,7 @@ namespace Kütüphane_Programı
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditBook));
             this.stokCountTextBox = new System.Windows.Forms.NumericUpDown();
             this.teminDatePicker = new System.Windows.Forms.DateTimePicker();
             this.teminTypeComboBox = new System.Windows.Forms.ComboBox();
@@ -65,7 +66,7 @@ namespace Kütüphane_Programı
             0});
             this.stokCountTextBox.Name = "stokCountTextBox";
             this.stokCountTextBox.Size = new System.Drawing.Size(150, 20);
-            this.stokCountTextBox.TabIndex = 38;
+            this.stokCountTextBox.TabIndex = 9;
             this.stokCountTextBox.Value = new decimal(new int[] {
             1,
             0,
@@ -78,7 +79,7 @@ namespace Kütüphane_Programı
             this.teminDatePicker.Location = new System.Drawing.Point(367, 62);
             this.teminDatePicker.Name = "teminDatePicker";
             this.teminDatePicker.Size = new System.Drawing.Size(150, 20);
-            this.teminDatePicker.TabIndex = 32;
+            this.teminDatePicker.TabIndex = 7;
             // 
             // teminTypeComboBox
             // 
@@ -92,7 +93,7 @@ namespace Kütüphane_Programı
             this.teminTypeComboBox.Location = new System.Drawing.Point(367, 35);
             this.teminTypeComboBox.Name = "teminTypeComboBox";
             this.teminTypeComboBox.Size = new System.Drawing.Size(150, 21);
-            this.teminTypeComboBox.TabIndex = 31;
+            this.teminTypeComboBox.TabIndex = 6;
             // 
             // bookTypeComboBox
             // 
@@ -173,7 +174,7 @@ namespace Kütüphane_Programı
             this.bookTypeComboBox.Location = new System.Drawing.Point(367, 9);
             this.bookTypeComboBox.Name = "bookTypeComboBox";
             this.bookTypeComboBox.Size = new System.Drawing.Size(150, 21);
-            this.bookTypeComboBox.TabIndex = 30;
+            this.bookTypeComboBox.TabIndex = 5;
             // 
             // label4
             // 
@@ -274,7 +275,7 @@ namespace Kütüphane_Programı
             this.cleanButton.Location = new System.Drawing.Point(12, 155);
             this.cleanButton.Name = "cleanButton";
             this.cleanButton.Size = new System.Drawing.Size(122, 37);
-            this.cleanButton.TabIndex = 36;
+            this.cleanButton.TabIndex = 10;
             this.cleanButton.Text = "Girdileri Temizle";
             this.cleanButton.UseVisualStyleBackColor = false;
             this.cleanButton.Click += new System.EventHandler(this.cleanButton_Click);
@@ -287,7 +288,7 @@ namespace Kütüphane_Programı
             this.saveButton.Location = new System.Drawing.Point(395, 155);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(122, 37);
-            this.saveButton.TabIndex = 37;
+            this.saveButton.TabIndex = 11;
             this.saveButton.Text = "KAYDET";
             this.saveButton.UseVisualStyleBackColor = false;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
@@ -298,7 +299,7 @@ namespace Kütüphane_Programı
             this.publisherTextBox.Location = new System.Drawing.Point(109, 114);
             this.publisherTextBox.Name = "publisherTextBox";
             this.publisherTextBox.Size = new System.Drawing.Size(150, 20);
-            this.publisherTextBox.TabIndex = 29;
+            this.publisherTextBox.TabIndex = 4;
             // 
             // donatorTextBox
             // 
@@ -306,7 +307,7 @@ namespace Kütüphane_Programı
             this.donatorTextBox.Location = new System.Drawing.Point(367, 88);
             this.donatorTextBox.Name = "donatorTextBox";
             this.donatorTextBox.Size = new System.Drawing.Size(150, 20);
-            this.donatorTextBox.TabIndex = 33;
+            this.donatorTextBox.TabIndex = 8;
             // 
             // pageCountTextBox
             // 
@@ -314,7 +315,7 @@ namespace Kütüphane_Programı
             this.pageCountTextBox.Location = new System.Drawing.Point(109, 88);
             this.pageCountTextBox.Name = "pageCountTextBox";
             this.pageCountTextBox.Size = new System.Drawing.Size(150, 20);
-            this.pageCountTextBox.TabIndex = 28;
+            this.pageCountTextBox.TabIndex = 3;
             // 
             // bookNameTextBox
             // 
@@ -322,7 +323,7 @@ namespace Kütüphane_Programı
             this.bookNameTextBox.Location = new System.Drawing.Point(109, 36);
             this.bookNameTextBox.Name = "bookNameTextBox";
             this.bookNameTextBox.Size = new System.Drawing.Size(150, 20);
-            this.bookNameTextBox.TabIndex = 16;
+            this.bookNameTextBox.TabIndex = 1;
             // 
             // authorTextBox
             // 
@@ -330,7 +331,7 @@ namespace Kütüphane_Programı
             this.authorTextBox.Location = new System.Drawing.Point(109, 62);
             this.authorTextBox.Name = "authorTextBox";
             this.authorTextBox.Size = new System.Drawing.Size(150, 20);
-            this.authorTextBox.TabIndex = 19;
+            this.authorTextBox.TabIndex = 2;
             // 
             // isbnTextBox
             // 
@@ -338,7 +339,7 @@ namespace Kütüphane_Programı
             this.isbnTextBox.Location = new System.Drawing.Point(109, 10);
             this.isbnTextBox.Name = "isbnTextBox";
             this.isbnTextBox.Size = new System.Drawing.Size(150, 20);
-            this.isbnTextBox.TabIndex = 15;
+            this.isbnTextBox.TabIndex = 0;
             // 
             // EditBook
             // 
@@ -369,6 +370,7 @@ namespace Kütüphane_Programı
             this.Controls.Add(this.authorTextBox);
             this.Controls.Add(this.isbnTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "EditBook";
             this.Text = "EditBook";

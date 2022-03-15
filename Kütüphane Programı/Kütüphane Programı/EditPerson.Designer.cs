@@ -29,6 +29,7 @@ namespace Kütüphane_Programı
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditPerson));
             this.birthdayTextBox = new System.Windows.Forms.MaskedTextBox();
             this.cleanButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
@@ -57,7 +58,7 @@ namespace Kütüphane_Programı
             this.birthdayTextBox.Mask = "00/00/0000";
             this.birthdayTextBox.Name = "birthdayTextBox";
             this.birthdayTextBox.Size = new System.Drawing.Size(149, 20);
-            this.birthdayTextBox.TabIndex = 28;
+            this.birthdayTextBox.TabIndex = 3;
             this.birthdayTextBox.ValidatingType = typeof(System.DateTime);
             // 
             // cleanButton
@@ -69,7 +70,7 @@ namespace Kütüphane_Programı
             this.cleanButton.Location = new System.Drawing.Point(274, 141);
             this.cleanButton.Name = "cleanButton";
             this.cleanButton.Size = new System.Drawing.Size(122, 37);
-            this.cleanButton.TabIndex = 26;
+            this.cleanButton.TabIndex = 8;
             this.cleanButton.Text = "Girdileri Temizle";
             this.cleanButton.UseVisualStyleBackColor = false;
             // 
@@ -81,7 +82,7 @@ namespace Kütüphane_Programı
             this.saveButton.Location = new System.Drawing.Point(402, 141);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(122, 37);
-            this.saveButton.TabIndex = 27;
+            this.saveButton.TabIndex = 9;
             this.saveButton.Text = "KAYDET";
             this.saveButton.UseVisualStyleBackColor = false;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
@@ -93,7 +94,7 @@ namespace Kütüphane_Programı
             this.addressTextBox.Multiline = true;
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(150, 73);
-            this.addressTextBox.TabIndex = 25;
+            this.addressTextBox.TabIndex = 7;
             // 
             // phoneTextBox
             // 
@@ -101,7 +102,7 @@ namespace Kütüphane_Programı
             this.phoneTextBox.Location = new System.Drawing.Point(374, 9);
             this.phoneTextBox.Name = "phoneTextBox";
             this.phoneTextBox.Size = new System.Drawing.Size(150, 20);
-            this.phoneTextBox.TabIndex = 23;
+            this.phoneTextBox.TabIndex = 5;
             // 
             // emailTextBox
             // 
@@ -109,7 +110,7 @@ namespace Kütüphane_Programı
             this.emailTextBox.Location = new System.Drawing.Point(374, 35);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(150, 20);
-            this.emailTextBox.TabIndex = 24;
+            this.emailTextBox.TabIndex = 6;
             // 
             // sexComboBox
             // 
@@ -123,7 +124,7 @@ namespace Kütüphane_Programı
             this.sexComboBox.Location = new System.Drawing.Point(115, 114);
             this.sexComboBox.Name = "sexComboBox";
             this.sexComboBox.Size = new System.Drawing.Size(150, 21);
-            this.sexComboBox.TabIndex = 22;
+            this.sexComboBox.TabIndex = 4;
             // 
             // label5
             // 
@@ -149,7 +150,7 @@ namespace Kütüphane_Programı
             this.surnameTextBox.Location = new System.Drawing.Point(115, 62);
             this.surnameTextBox.Name = "surnameTextBox";
             this.surnameTextBox.Size = new System.Drawing.Size(150, 20);
-            this.surnameTextBox.TabIndex = 21;
+            this.surnameTextBox.TabIndex = 2;
             // 
             // label3
             // 
@@ -175,7 +176,7 @@ namespace Kütüphane_Programı
             this.nameTextBox.Location = new System.Drawing.Point(115, 36);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(150, 20);
-            this.nameTextBox.TabIndex = 20;
+            this.nameTextBox.TabIndex = 1;
             // 
             // label7
             // 
@@ -210,7 +211,7 @@ namespace Kütüphane_Programı
             this.tcTextBox.Location = new System.Drawing.Point(115, 10);
             this.tcTextBox.Name = "tcTextBox";
             this.tcTextBox.Size = new System.Drawing.Size(150, 20);
-            this.tcTextBox.TabIndex = 17;
+            this.tcTextBox.TabIndex = 0;
             // 
             // label1
             // 
@@ -246,6 +247,7 @@ namespace Kütüphane_Programı
             this.Controls.Add(this.tcTextBox);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "EditPerson";
             this.Text = "Kişiyi Düzenle";

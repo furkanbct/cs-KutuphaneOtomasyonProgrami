@@ -61,6 +61,16 @@ namespace Kütüphane_Programı.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Custom_Icon_Design_Pretty_Office_2_Library {
+            get {
+                object obj = ResourceManager.GetObject("Custom_Icon_Design_Pretty_Office_2_Library", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap refresh_icon {

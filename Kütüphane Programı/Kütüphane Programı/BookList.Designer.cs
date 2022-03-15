@@ -30,7 +30,8 @@ namespace Kütüphane_Programı
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BookList));
             this.booksDataView = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,6 +52,8 @@ namespace Kütüphane_Programı
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.refreshButton = new System.Windows.Forms.Button();
+            this.totalBookCountLabel = new System.Windows.Forms.Label();
             this.totalBookCountTextLabel = new System.Windows.Forms.Label();
             this.publisherTextBox = new System.Windows.Forms.TextBox();
             this.pageCountTextBox = new System.Windows.Forms.TextBox();
@@ -77,8 +80,6 @@ namespace Kütüphane_Programı
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.totalBookCountLabel = new System.Windows.Forms.Label();
-            this.refreshButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.booksDataView)).BeginInit();
             this.dataViewContextMenu.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -90,14 +91,14 @@ namespace Kütüphane_Programı
             this.booksDataView.AllowUserToAddRows = false;
             this.booksDataView.AllowUserToDeleteRows = false;
             this.booksDataView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.booksDataView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.booksDataView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.booksDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.booksDataView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -296,6 +297,26 @@ namespace Kütüphane_Programı
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Kitap Bilgileri";
+            // 
+            // refreshButton
+            // 
+            this.refreshButton.Image = global::Kütüphane_Programı.Properties.Resources.refresh_icon;
+            this.refreshButton.Location = new System.Drawing.Point(493, 106);
+            this.refreshButton.Name = "refreshButton";
+            this.refreshButton.Size = new System.Drawing.Size(40, 40);
+            this.refreshButton.TabIndex = 3;
+            this.refreshButton.UseVisualStyleBackColor = true;
+            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
+            // 
+            // totalBookCountLabel
+            // 
+            this.totalBookCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.totalBookCountLabel.Location = new System.Drawing.Point(504, 89);
+            this.totalBookCountLabel.Name = "totalBookCountLabel";
+            this.totalBookCountLabel.Size = new System.Drawing.Size(213, 25);
+            this.totalBookCountLabel.TabIndex = 2;
+            this.totalBookCountLabel.Text = "153";
+            this.totalBookCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // totalBookCountTextLabel
             // 
@@ -548,27 +569,7 @@ namespace Kütüphane_Programı
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // totalBookCountLabel
-            // 
-            this.totalBookCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.totalBookCountLabel.Location = new System.Drawing.Point(504, 89);
-            this.totalBookCountLabel.Name = "totalBookCountLabel";
-            this.totalBookCountLabel.Size = new System.Drawing.Size(213, 25);
-            this.totalBookCountLabel.TabIndex = 2;
-            this.totalBookCountLabel.Text = "153";
-            this.totalBookCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // refreshButton
-            // 
-            this.refreshButton.Image = global::Kütüphane_Programı.Properties.Resources.refresh_icon;
-            this.refreshButton.Location = new System.Drawing.Point(493, 106);
-            this.refreshButton.Name = "refreshButton";
-            this.refreshButton.Size = new System.Drawing.Size(40, 40);
-            this.refreshButton.TabIndex = 3;
-            this.refreshButton.UseVisualStyleBackColor = true;
-            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
-            // 
-            // KitapListesi
+            // BookList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -580,8 +581,9 @@ namespace Kütüphane_Programı
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.booksDataView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "KitapListesi";
+            this.Name = "BookList";
             this.Text = "KitapListesi";
             this.Load += new System.EventHandler(this.KitapListesi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.booksDataView)).EndInit();

@@ -56,24 +56,98 @@ namespace Kütüphane_Programı
             oduncDB.IsTaken = "Hayır";
             oduncDB.DateOfTaken = "-";
 
-            if (!DatabaseManager.CheckOduncExist(oduncDB.TCNO, oduncDB.ISBN))
+            if (isbnTextBox.Text != string.Empty && tcnoTextBox.Text != string.Empty)
             {
-                try
+
+                if (!DatabaseManager.CheckOduncExist(oduncDB.TCNO, oduncDB.ISBN))
                 {
-                    DatabaseManager.Insert(oduncDB);
-                    oduncListesiDataView.Rows.Clear();
-                    DatabaseManager.UpdateOduncDataView(oduncListesiDataView);
-                    MessageBox.Show("Ödünç Verme İşlemi Başarıyla Tamamlandı", "Kütüphane Otomasyon Programı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    if (DatabaseManager.CheckPersonExist(oduncDB.TCNO))
+                    {
+                        if (DatabaseManager.CheckBookExist(oduncDB.ISBN))
+                        {
+                            try
+                            {
+                                DatabaseManager.Insert(oduncDB);
+                                oduncListesiDataView.Rows.Clear();
+                                DatabaseManager.UpdateOduncDataView(oduncListesiDataView);
+                                MessageBox.Show("Ödünç Verme İşlemi Başarıyla Tamamlandı", "Kütüphane Otomasyon Programı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Ödünç Verme İşlemi Başarısız Oldu Hata :" + ex.Message, "Kütüphane Otomasyon Programı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                        else
+                        {
+                            DialogResult result = MessageBox.Show("Bu ISBN Numarası Kayıtlı Değil Yinede Devam Etmek İstiyormusunuz ?", "Kütüphane Otomasyon Programı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                            if (result == DialogResult.Yes)
+                            {
+                                try
+                                {
+                                    DatabaseManager.Insert(oduncDB);
+                                    oduncListesiDataView.Rows.Clear();
+                                    DatabaseManager.UpdateOduncDataView(oduncListesiDataView);
+                                    MessageBox.Show("Ödünç Verme İşlemi Başarıyla Tamamlandı", "Kütüphane Otomasyon Programı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    this.Close();
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show("Ödünç Verme İşlemi Başarısız Oldu Hata :" + ex.Message, "Kütüphane Otomasyon Programı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        DialogResult result = MessageBox.Show("Bu TCNO Kayıtlı Değil Yinede Devam Etmek İstiyormusunuz ?", "Kütüphane Otomasyon Programı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                        if (result == DialogResult.Yes)
+                        {
+                            if (DatabaseManager.CheckBookExist(oduncDB.ISBN))
+                            {
+                                try
+                                {
+                                    DatabaseManager.Insert(oduncDB);
+                                    oduncListesiDataView.Rows.Clear();
+                                    DatabaseManager.UpdateOduncDataView(oduncListesiDataView);
+                                    MessageBox.Show("Ödünç Verme İşlemi Başarıyla Tamamlandı", "Kütüphane Otomasyon Programı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    this.Close();
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show("Ödünç Verme İşlemi Başarısız Oldu Hata :" + ex.Message, "Kütüphane Otomasyon Programı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+                            else
+                            {
+                                DialogResult res = MessageBox.Show("Bu ISBN Numarası Kayıtlı Değil Yinede Devam Etmek İstiyormusunuz ?", "Kütüphane Otomasyon Programı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                                if (res == DialogResult.Yes)
+                                {
+                                    try
+                                    {
+                                        DatabaseManager.Insert(oduncDB);
+                                        oduncListesiDataView.Rows.Clear();
+                                        DatabaseManager.UpdateOduncDataView(oduncListesiDataView);
+                                        MessageBox.Show("Ödünç Verme İşlemi Başarıyla Tamamlandı", "Kütüphane Otomasyon Programı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        this.Close();
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        MessageBox.Show("Ödünç Verme İşlemi Başarısız Oldu Hata :" + ex.Message, "Kütüphane Otomasyon Programı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show("Ödünç Verme İşlemi Başarısız Oldu Hata :" + ex.Message, "Kütüphane Otomasyon Programı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Bu Bilgiler Zaten Kayıtlı", "Kütüphane Otomasyon Progarmı", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Bu Bilgiler Zaten Kayıtlı","Kütüphane Otomasyon Progarmı",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("TCNO veya ISBN Boş Bırakılamaz","Kütüphane Otomasyon Programı",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 

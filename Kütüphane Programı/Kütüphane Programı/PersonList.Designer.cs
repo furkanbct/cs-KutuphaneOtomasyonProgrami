@@ -31,12 +31,14 @@ namespace Kütüphane_Programı
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PersonList));
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.totalPersonCountLabel = new System.Windows.Forms.Label();
             this.totalPersonCountTextLabel = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.refreshButton = new System.Windows.Forms.Button();
             this.sexTextBox = new System.Windows.Forms.TextBox();
             this.birthdateTextBox = new System.Windows.Forms.TextBox();
             this.surnameTextBox = new System.Windows.Forms.TextBox();
@@ -62,7 +64,6 @@ namespace Kütüphane_Programı
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.kopyalaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personsDataView = new System.Windows.Forms.DataGridView();
-            this.dataViewContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,7 +73,7 @@ namespace Kütüphane_Programı
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.refreshButton = new System.Windows.Forms.Button();
+            this.dataViewContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.personsDataView)).BeginInit();
@@ -171,6 +172,16 @@ namespace Kütüphane_Programı
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Kişi Bilgileri";
+            // 
+            // refreshButton
+            // 
+            this.refreshButton.Image = global::Kütüphane_Programı.Properties.Resources.refresh_icon;
+            this.refreshButton.Location = new System.Drawing.Point(493, 106);
+            this.refreshButton.Name = "refreshButton";
+            this.refreshButton.Size = new System.Drawing.Size(40, 40);
+            this.refreshButton.TabIndex = 3;
+            this.refreshButton.UseVisualStyleBackColor = true;
+            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
             // 
             // sexTextBox
             // 
@@ -436,13 +447,6 @@ namespace Kütüphane_Programı
             this.personsDataView.TabIndex = 5;
             this.personsDataView.SelectionChanged += new System.EventHandler(this.personsDataView_SelectionChanged);
             // 
-            // dataViewContextMenu
-            // 
-            this.dataViewContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.kopyalaToolStripMenuItem});
-            this.dataViewContextMenu.Name = "dataViewContextMenu";
-            this.dataViewContextMenu.Size = new System.Drawing.Size(117, 26);
-            // 
             // Column1
             // 
             this.Column1.HeaderText = "TCNO";
@@ -497,15 +501,12 @@ namespace Kütüphane_Programı
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
             // 
-            // refreshButton
+            // dataViewContextMenu
             // 
-            this.refreshButton.Image = global::Kütüphane_Programı.Properties.Resources.refresh_icon;
-            this.refreshButton.Location = new System.Drawing.Point(493, 106);
-            this.refreshButton.Name = "refreshButton";
-            this.refreshButton.Size = new System.Drawing.Size(40, 40);
-            this.refreshButton.TabIndex = 3;
-            this.refreshButton.UseVisualStyleBackColor = true;
-            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
+            this.dataViewContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.kopyalaToolStripMenuItem});
+            this.dataViewContextMenu.Name = "dataViewContextMenu";
+            this.dataViewContextMenu.Size = new System.Drawing.Size(117, 26);
             // 
             // PersonList
             // 
@@ -519,6 +520,7 @@ namespace Kütüphane_Programı
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.personsDataView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "PersonList";
             this.Text = "PersonList";

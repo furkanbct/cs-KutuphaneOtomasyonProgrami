@@ -29,6 +29,7 @@ namespace Kütüphane_Programı
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GiveBook));
             this.giveDatePicker = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,7 +61,7 @@ namespace Kütüphane_Programı
             this.giveDatePicker.Location = new System.Drawing.Point(99, 90);
             this.giveDatePicker.Name = "giveDatePicker";
             this.giveDatePicker.Size = new System.Drawing.Size(150, 20);
-            this.giveDatePicker.TabIndex = 56;
+            this.giveDatePicker.TabIndex = 6;
             // 
             // label7
             // 
@@ -89,7 +90,7 @@ namespace Kütüphane_Programı
             this.cleanButton.Location = new System.Drawing.Point(268, 145);
             this.cleanButton.Name = "cleanButton";
             this.cleanButton.Size = new System.Drawing.Size(122, 37);
-            this.cleanButton.TabIndex = 58;
+            this.cleanButton.TabIndex = 10;
             this.cleanButton.Text = "Girdileri Temizle";
             this.cleanButton.UseVisualStyleBackColor = false;
             this.cleanButton.Click += new System.EventHandler(this.cleanButton_Click);
@@ -102,7 +103,7 @@ namespace Kütüphane_Programı
             this.saveButton.Location = new System.Drawing.Point(396, 145);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(122, 37);
-            this.saveButton.TabIndex = 59;
+            this.saveButton.TabIndex = 11;
             this.saveButton.Text = "KAYDET";
             this.saveButton.UseVisualStyleBackColor = false;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
@@ -113,7 +114,7 @@ namespace Kütüphane_Programı
             this.tcnoTextBox.Location = new System.Drawing.Point(368, 12);
             this.tcnoTextBox.Name = "tcnoTextBox";
             this.tcnoTextBox.Size = new System.Drawing.Size(150, 20);
-            this.tcnoTextBox.TabIndex = 39;
+            this.tcnoTextBox.TabIndex = 3;
             this.tcnoTextBox.TextChanged += new System.EventHandler(this.tcnoTextBox_TextChanged);
             // 
             // label2
@@ -131,7 +132,7 @@ namespace Kütüphane_Programı
             this.takeDatePicker.Location = new System.Drawing.Point(368, 90);
             this.takeDatePicker.Name = "takeDatePicker";
             this.takeDatePicker.Size = new System.Drawing.Size(150, 20);
-            this.takeDatePicker.TabIndex = 56;
+            this.takeDatePicker.TabIndex = 7;
             // 
             // groupBox1
             // 
@@ -151,7 +152,7 @@ namespace Kütüphane_Programı
             this.button1.Location = new System.Drawing.Point(6, 9);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 37);
-            this.button1.TabIndex = 11;
+            this.button1.TabIndex = 8;
             this.button1.Text = "Kamera İle ISBN Okut";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -165,7 +166,7 @@ namespace Kütüphane_Programı
             this.button2.Location = new System.Drawing.Point(102, 9);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(90, 37);
-            this.button2.TabIndex = 12;
+            this.button2.TabIndex = 9;
             this.button2.Text = "Barkod Okuyucu İle ISBN Okut";
             this.button2.UseVisualStyleBackColor = false;
             // 
@@ -175,7 +176,7 @@ namespace Kütüphane_Programı
             this.nameSurnameTextBox.Location = new System.Drawing.Point(368, 38);
             this.nameSurnameTextBox.Name = "nameSurnameTextBox";
             this.nameSurnameTextBox.Size = new System.Drawing.Size(150, 20);
-            this.nameSurnameTextBox.TabIndex = 39;
+            this.nameSurnameTextBox.TabIndex = 4;
             // 
             // label3
             // 
@@ -201,7 +202,7 @@ namespace Kütüphane_Programı
             this.isbnTextBox.Location = new System.Drawing.Point(99, 12);
             this.isbnTextBox.Name = "isbnTextBox";
             this.isbnTextBox.Size = new System.Drawing.Size(150, 20);
-            this.isbnTextBox.TabIndex = 40;
+            this.isbnTextBox.TabIndex = 0;
             this.isbnTextBox.TextChanged += new System.EventHandler(this.isbnTextBox_TextChanged);
             // 
             // label5
@@ -219,7 +220,7 @@ namespace Kütüphane_Programı
             this.bookNameTextBox.Location = new System.Drawing.Point(99, 38);
             this.bookNameTextBox.Name = "bookNameTextBox";
             this.bookNameTextBox.Size = new System.Drawing.Size(150, 20);
-            this.bookNameTextBox.TabIndex = 40;
+            this.bookNameTextBox.TabIndex = 1;
             // 
             // label6
             // 
@@ -236,7 +237,7 @@ namespace Kütüphane_Programı
             this.bookAuthorTextBox.Location = new System.Drawing.Point(99, 64);
             this.bookAuthorTextBox.Name = "bookAuthorTextBox";
             this.bookAuthorTextBox.Size = new System.Drawing.Size(150, 20);
-            this.bookAuthorTextBox.TabIndex = 40;
+            this.bookAuthorTextBox.TabIndex = 2;
             // 
             // label8
             // 
@@ -267,10 +268,11 @@ namespace Kütüphane_Programı
             this.sexComboBox.Location = new System.Drawing.Point(368, 64);
             this.sexComboBox.Name = "sexComboBox";
             this.sexComboBox.Size = new System.Drawing.Size(150, 21);
-            this.sexComboBox.TabIndex = 62;
+            this.sexComboBox.TabIndex = 5;
             // 
             // GiveBook
             // 
+            this.AcceptButton = this.saveButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
@@ -296,6 +298,7 @@ namespace Kütüphane_Programı
             this.Controls.Add(this.nameSurnameTextBox);
             this.Controls.Add(this.tcnoTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "GiveBook";
             this.Text = "GiveBook";

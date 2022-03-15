@@ -29,6 +29,7 @@ namespace Kütüphane_Programı
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CameraBarcodeReader));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -74,7 +75,7 @@ namespace Kütüphane_Programı
             this.label2.TabIndex = 5;
             this.label2.Text = "Bekleniyor...";
             // 
-            // KameraBarkodOkuyucu
+            // CameraBarcodeReader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -84,8 +85,9 @@ namespace Kütüphane_Programı
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "KameraBarkodOkuyucu";
+            this.Name = "CameraBarcodeReader";
             this.Text = "Kamera Barkod Okuyucu";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
