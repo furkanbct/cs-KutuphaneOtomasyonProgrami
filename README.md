@@ -1,6 +1,14 @@
 # C# Kütüphane Otomasyon Programı
  ## Hakkında
  Bu proje kütüphanelerin kitap kayıt işlemleri, okuyucu kayıt işlemleri ve ödünç al - ver işlemlerini kolaylaştırmak için yapılmıştır.
+ ### Özellikler
+ * Kamera ile ISBN okutma ve Google Books veritabanından kitap bilgilerini çekerek kitap bilgilerini otomatik doldurma
+ * Kolay ödünç takip sistemi
+ * Bilgileri veritabanına gerçek zamanlı kayıt etme
+ * Alınacak - Gecikmiş - Bugün alınacak - Alındı durumları için kolayca anlaşılabilir renklendirme
+ * Kolayca yapılabilen Kitap silme - Kitap düzenleme - Kişi silme - Kişi düzenleme işlemleri
+ * Kolay taşınabilirlik : ```data.db``` dosyasını başka bilgisayarda bulunan ```KOP.exe```'nin bulunduğu kalsöre atarak bilgilere erişme
+ * Veritabanını şifreleme (EKLENECEK)
  ## Nasıl Kullanılır
  ```Kütüphane Otomasyon Programı Build``` klasörünün içerisindeki ```KOP.exe``` adlı dosyayı çalıştırarak programı kullanabilirsiniz.
 
