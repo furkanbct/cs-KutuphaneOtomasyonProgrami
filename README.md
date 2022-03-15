@@ -4,7 +4,7 @@
  ## Nasıl Kullanılır
  ```Kütüphane Otomasyon Programı Build``` klasörünün içerisindeki ```KOP.exe``` adlı dosyayı çalıştırarak programı kullanabilirsiniz.
 
- Veya ```Kütüphane Otomasyon Programı``` klasörünün içerisindeki ```Kutu
+ Veya ```Kütüphane Otomasyon Programı``` klasörünün içerisindeki ```KütüphaneOtomasyonProgramı.sln``` adlı dosyayı ```Visual Studio``` ile açabilirsiniz.
  ## Ekran Görüntüleri
  x
  ## Kullanılan Teknolojiler
