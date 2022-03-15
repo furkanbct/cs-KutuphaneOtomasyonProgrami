@@ -6,7 +6,17 @@
 
  Veya ```Kütüphane Programı``` klasörünün içerisindeki ```KütüphaneOtomasyonProgramı.sln``` adlı dosyayı ```Visual Studio``` programı ile açarak kullanabilirsiniz.
  ## Ekran Görüntüleri
- x
+
+<img src=Screenshots/screenshot1.png width="400" height="200"/>
+
+<img src=Screenshots/screenshot2.png width="400" height="200"/>
+
+<img src=Screenshots/screenshot3.png width="400" height="200"/>
+
+<img src=Screenshots/screenshot4.png width="400" height="200"/>
+
+<img src=Screenshots/screenshot5.png width="400" height="200"/>
+
  ## Kullanılan Teknolojiler
  [.NET](https://dotnet.microsoft.com/en-us/)
 
