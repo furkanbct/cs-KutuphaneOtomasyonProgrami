@@ -88,23 +88,30 @@ namespace Kütüphane_Programı
 
         private void button2_Click(object sender, EventArgs e)//Kitabı Sil Butonu
         {
-            DialogResult result = MessageBox.Show("Seçilen Kitabı Silmek İstediğine Eminmisin ?","Kütüphane Otomasyon Programı",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
-            if(result == DialogResult.Yes)
+            if (booksDataView.CurrentCell != null)
             {
-                DatabaseManager.DeleteBook(booksDataView, booksDataView.CurrentCell.OwningRow.Cells[0].Value.ToString());
+                DialogResult result = MessageBox.Show("Seçilen Kitabı Silmek İstediğine Eminmisin ?", "Kütüphane Otomasyon Programı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    DatabaseManager.DeleteBook(booksDataView, booksDataView.CurrentCell.OwningRow.Cells[0].Value.ToString());
+                }
+            }
+            else
+            {
+                MessageBox.Show("Lütfen Listeden Bir Kitap Seçiniz", "Kütüphane Otomasyon Programı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void button1_Click(object sender, EventArgs e)//Kitabı Düzenle Butonu
         {
-            try
+            if (booksDataView.CurrentCell != null)
             {
                 EditBook editBook = new EditBook(booksDataView, booksDataView.CurrentCell.RowIndex);
                 editBook.ShowDialog();
             }
-            catch
+            else
             {
-                MessageBox.Show("Lütfen Listeden Bir Kitap Seçiniz","Kütüphane Otomasyon Programı",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("Lütfen Listeden Bir Kitap Seçiniz", "Kütüphane Otomasyon Programı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

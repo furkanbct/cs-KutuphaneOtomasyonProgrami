@@ -85,21 +85,28 @@ namespace Kütüphane_Programı
 
         private void button2_Click(object sender, EventArgs e)//Kişiyi Sil Butonu
         {
-            DialogResult result = MessageBox.Show("Seçilen Kişiyi Silmek İstediğine Eminmisin ?", "Kütüphane Otomasyon Programı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (result == DialogResult.Yes)
+            if(personsDataView.CurrentCell != null)
             {
-                DatabaseManager.DeletePerson(personsDataView, personsDataView.CurrentCell.OwningRow.Cells[0].Value.ToString());
+                DialogResult result = MessageBox.Show("Seçilen Kişiyi Silmek İstediğine Eminmisin ?", "Kütüphane Otomasyon Programı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    DatabaseManager.DeletePerson(personsDataView, personsDataView.CurrentCell.OwningRow.Cells[0].Value.ToString());
+                }
+            }
+            else
+            {
+                MessageBox.Show("Lütfen Listeden Bir Kişi Seçiniz", "Kütüphane Otomasyon Programı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void button1_Click(object sender, EventArgs e)//Kişiyi Düzenle Butonu
         {
-            try
+            if(personsDataView.CurrentCell != null)
             {
                 EditPerson editPerson = new EditPerson(personsDataView, personsDataView.CurrentCell.RowIndex);
                 editPerson.Show();
             }
-            catch
+            else
             {
                 MessageBox.Show("Lütfen Listeden Bir Kişi Seçiniz", "Kütüphane Otomasyon Programı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
