@@ -301,7 +301,7 @@ namespace Kütüphane_Programı
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "GiveBook";
-            this.Text = "GiveBook";
+            this.Text = "Ödünç Ver";
             this.Load += new System.EventHandler(this.GiveBook_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);

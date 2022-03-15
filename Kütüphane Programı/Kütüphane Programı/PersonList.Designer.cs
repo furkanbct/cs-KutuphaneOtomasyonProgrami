@@ -523,7 +523,7 @@ namespace Kütüphane_Programı
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "PersonList";
-            this.Text = "PersonList";
+            this.Text = "Kişi Listesi";
             this.Load += new System.EventHandler(this.PersonList_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

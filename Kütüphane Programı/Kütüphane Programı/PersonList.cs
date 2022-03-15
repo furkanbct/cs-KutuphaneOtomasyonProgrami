@@ -94,8 +94,15 @@ namespace Kütüphane_Programı
 
         private void button1_Click(object sender, EventArgs e)//Kişiyi Düzenle Butonu
         {
-            EditPerson editPerson = new EditPerson(personsDataView,personsDataView.CurrentCell.RowIndex);
-            editPerson.Show();
+            try
+            {
+                EditPerson editPerson = new EditPerson(personsDataView, personsDataView.CurrentCell.RowIndex);
+                editPerson.Show();
+            }
+            catch
+            {
+                MessageBox.Show("Lütfen Listeden Bir Kişi Seçiniz", "Kütüphane Otomasyon Programı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

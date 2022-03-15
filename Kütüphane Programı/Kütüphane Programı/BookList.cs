@@ -97,8 +97,15 @@ namespace Kütüphane_Programı
 
         private void button1_Click(object sender, EventArgs e)//Kitabı Düzenle Butonu
         {
-            EditBook editBook = new EditBook(booksDataView,booksDataView.CurrentCell.RowIndex);
-            editBook.ShowDialog();
+            try
+            {
+                EditBook editBook = new EditBook(booksDataView, booksDataView.CurrentCell.RowIndex);
+                editBook.ShowDialog();
+            }
+            catch
+            {
+                MessageBox.Show("Lütfen Listeden Bir Kitap Seçiniz","Kütüphane Otomasyon Programı",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
         }
     }
 }

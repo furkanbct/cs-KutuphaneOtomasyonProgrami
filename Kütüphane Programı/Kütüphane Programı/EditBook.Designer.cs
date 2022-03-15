@@ -373,7 +373,7 @@ namespace Kütüphane_Programı
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "EditBook";
-            this.Text = "EditBook";
+            this.Text = "Kitabı Düzenle";
             this.Load += new System.EventHandler(this.EditBook_Load);
             ((System.ComponentModel.ISupportInitialize)(this.stokCountTextBox)).EndInit();
             this.ResumeLayout(false);

@@ -637,7 +637,7 @@ namespace Kütüphane_Programı
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "OduncList";
-            this.Text = "Ödünç İşlemleri";
+            this.Text = "Ödünç Listesi";
             this.Load += new System.EventHandler(this.OduncList_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
