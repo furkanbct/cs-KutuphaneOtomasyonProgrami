@@ -61,3 +61,4 @@ C:\Users\Furkan\Documents\GitHub\cs-KutuphaneOtomasyonProgrami\Kütüphane Progr
 C:\Users\Furkan\Documents\GitHub\cs-KutuphaneOtomasyonProgrami\Kütüphane Programı\Kütüphane Programı\obj\Debug\KütüphaneOtomasyonProgramı.csproj.CopyComplete
 C:\Users\Furkan\Documents\GitHub\cs-KutuphaneOtomasyonProgrami\Kütüphane Programı\Kütüphane Programı\obj\Debug\KütüphaneOtomasyonProgramı.exe
 C:\Users\Furkan\Documents\GitHub\cs-KutuphaneOtomasyonProgrami\Kütüphane Programı\Kütüphane Programı\obj\Debug\KütüphaneOtomasyonProgramı.pdb
+C:\Users\Furkan\Documents\GitHub\cs-KutuphaneOtomasyonProgrami\Kütüphane Programı\Kütüphane Programı\obj\Debug\KütüphaneOtomasyonProgramı.csproj.AssemblyReference.cache
