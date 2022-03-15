@@ -21,3 +21,5 @@
  [SQLite](https://www.sqlite.org/index.html)
  ## Gereksinimler
  [.NET Framework v4.7.2](https://dotnet.microsoft.com/en-us/tr-tr/download/dotnet-framework/net472)
+ ## Lisans
+ [MIT](https://choosealicense.com/licenses/mit/)
