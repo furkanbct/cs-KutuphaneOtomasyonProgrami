@@ -175,7 +175,7 @@ namespace Kütüphane_Programı
             // 
             // refreshButton
             // 
-            this.refreshButton.Image = global::Kütüphane_Programı.Properties.Resources.refresh_icon;
+            this.refreshButton.Image = global::Kütüphane_Otomasyon_Programı.Properties.Resources.refresh_icon;
             this.refreshButton.Location = new System.Drawing.Point(493, 106);
             this.refreshButton.Name = "refreshButton";
             this.refreshButton.Size = new System.Drawing.Size(40, 40);

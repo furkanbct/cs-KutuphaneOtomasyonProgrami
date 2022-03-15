@@ -8,7 +8,6 @@ using System.Drawing;
 using System.Threading.Tasks;
 using System.Net;
 using System.Globalization;
-using System.Text.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using System.Windows.Forms;

@@ -96,7 +96,6 @@ C:\Users\Furkan\Documents\GitHub\cs-KutuphaneOtomasyonProgrami\Kütüphane Progr
 C:\Users\Furkan\Documents\GitHub\cs-KutuphaneOtomasyonProgrami\Kütüphane Programı\Kütüphane Programı\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\Furkan\Documents\GitHub\cs-KutuphaneOtomasyonProgrami\Kütüphane Programı\Kütüphane Programı\bin\Debug\Microsoft.Extensions.Configuration.dll
 C:\Users\Furkan\Documents\GitHub\cs-KutuphaneOtomasyonProgrami\Kütüphane Programı\Kütüphane Programı\bin\Debug\Microsoft.Extensions.Configuration.FileExtensions.dll
-C:\Users\Furkan\Documents\GitHub\cs-KutuphaneOtomasyonProgrami\Kütüphane Programı\Kütüphane Programı\bin\Debug\Microsoft.Extensions.Configuration.Json.dll
 C:\Users\Furkan\Documents\GitHub\cs-KutuphaneOtomasyonProgrami\Kütüphane Programı\Kütüphane Programı\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.dll
 C:\Users\Furkan\Documents\GitHub\cs-KutuphaneOtomasyonProgrami\Kütüphane Programı\Kütüphane Programı\bin\Debug\Microsoft.Extensions.FileProviders.Physical.dll
 C:\Users\Furkan\Documents\GitHub\cs-KutuphaneOtomasyonProgrami\Kütüphane Programı\Kütüphane Programı\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.dll
@@ -128,7 +127,6 @@ C:\Users\Furkan\Documents\GitHub\cs-KutuphaneOtomasyonProgrami\Kütüphane Progr
 C:\Users\Furkan\Documents\GitHub\cs-KutuphaneOtomasyonProgrami\Kütüphane Programı\Kütüphane Programı\bin\Debug\Microsoft.Extensions.Configuration.xml
 C:\Users\Furkan\Documents\GitHub\cs-KutuphaneOtomasyonProgrami\Kütüphane Programı\Kütüphane Programı\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
 C:\Users\Furkan\Documents\GitHub\cs-KutuphaneOtomasyonProgrami\Kütüphane Programı\Kütüphane Programı\bin\Debug\Microsoft.Extensions.Configuration.FileExtensions.xml
-C:\Users\Furkan\Documents\GitHub\cs-KutuphaneOtomasyonProgrami\Kütüphane Programı\Kütüphane Programı\bin\Debug\Microsoft.Extensions.Configuration.Json.xml
 C:\Users\Furkan\Documents\GitHub\cs-KutuphaneOtomasyonProgrami\Kütüphane Programı\Kütüphane Programı\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.xml
 C:\Users\Furkan\Documents\GitHub\cs-KutuphaneOtomasyonProgrami\Kütüphane Programı\Kütüphane Programı\bin\Debug\Microsoft.Extensions.FileProviders.Physical.xml
 C:\Users\Furkan\Documents\GitHub\cs-KutuphaneOtomasyonProgrami\Kütüphane Programı\Kütüphane Programı\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.xml

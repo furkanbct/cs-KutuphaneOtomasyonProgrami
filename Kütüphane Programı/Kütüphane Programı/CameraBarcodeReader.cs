@@ -12,6 +12,7 @@ using AForge.Video.DirectShow;
 using AForge.Video;
 using System.Diagnostics;
 using System.Net.NetworkInformation;
+using Kütüphane_Otomasyon_Programı.Properties;
 
 namespace Kütüphane_Programı
 {
@@ -58,7 +59,7 @@ namespace Kütüphane_Programı
                 {
                     Invoke(new MethodInvoker(delegate ()
                     {
-                        System.Media.SoundPlayer player = new System.Media.SoundPlayer(Application.StartupPath+"\\beep.wav");
+                        System.Media.SoundPlayer player = new System.Media.SoundPlayer(Resources.beep);
                         player.Play();
                         if(main != null)
                         {
