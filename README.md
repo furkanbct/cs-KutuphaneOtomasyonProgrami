@@ -17,6 +17,8 @@
 
 <img src=Screenshots/screenshot5.png width="400" height="200"/>
 
+<img src=Screenshots/ReadBarcode.gif width="400" height="200"/>
+
  ## Kullanılan Teknolojiler
  [.NET](https://dotnet.microsoft.com/en-us/)
 
