@@ -15,17 +15,17 @@
  Veya ```Kütüphane Programı``` klasörünün içerisindeki ```KütüphaneOtomasyonProgramı.sln``` adlı dosyayı ```Visual Studio``` programı ile açarak hem kaynak kodlarını inceleyebilir hem de programı kullanabilirsiniz.
  ## Ekran Görüntüleri
 
-<img src=Screenshots/screenshot1.png width="400" height="200"/>
+<img src=Screenshots/screenshot1.png width="450" height="200"/>
 
-<img src=Screenshots/screenshot2.png width="400" height="200"/>
+<img src=Screenshots/screenshot2.png width="450" height="200"/>
 
-<img src=Screenshots/screenshot3.png width="400" height="200"/>
+<img src=Screenshots/screenshot3.png width="450" height="200"/>
 
-<img src=Screenshots/screenshot4.png width="400" height="200"/>
+<img src=Screenshots/screenshot4.png width="450" height="200"/>
 
-<img src=Screenshots/screenshot5.png width="400" height="200"/>
+<img src=Screenshots/screenshot5.png width="450" height="200"/>
 
-<img src=Screenshots/ReadBarcode.gif width="400" height="200"/>
+<img src=Screenshots/ReadBarcode.gif width="450" height="200"/>
 
  ## Kullanılan Teknolojiler
  [.NET](https://dotnet.microsoft.com/en-us/)
